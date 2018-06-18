@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Webmapping</title>
+    <meta charset="utf-8" />
+	
+	<!-- Bibliothèque de base: Leaflet-->
+    <link rel="stylesheet" href="libs/leaflet.css"/>
+	<script src="libs/leaflet.js"></script>
+	
+	<!-- Draw-->
+	<script src= "https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.2.3/leaflet.draw-src.js"></script>
+	<link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.2.3/leaflet.draw.css">
+	<script src= "https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.2.3/leaflet.draw.js"></script>
+	
+	
+	<!-- GeoCoder-->
+	<link rel="stylesheet" href="libs/Control.OSMGeocoder.css"/>
+	<script src="libs/Control.OSMGeocoder.js"></script>
+	
+	<!-- Overview-->
+	<link rel="stylesheet" href="libs/overview/MiniMap.css" />
+	<script src="libs/overview/MiniMap.js"></script>
+ 
+	<!-- Location-->
+	<link rel="stylesheet" href="libs/L.Control.Locate.min.css" />
+    <script src="libs/L.Control.Locate.js"></script>
+	
+	<!-- Mouse position display-->
+	<link rel="stylesheet" href="libs/L.Control.MousePosition.css" />
+    <script src="libs/L.Control.MousePosition.js"></script>
+	
+	<!-- Navigation Bar-->
+    <link rel="stylesheet" href="libs/NavBar/NavBar.css"/>
+	<script src="libs/NavBar/NavBar.js"></script>
+	
+	<!-- Font-->
+ 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+	
+	<!-- jquery -->
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+	<!-- Legend menu-->
+	<link rel="stylesheet" href="libs/slide_menu/SlideMenu.css" />
+	<script src="libs/slide_menu/SlideMenu.js"></script>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+	
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        html, body, #map {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script>
+	
+		///// Fond de base
+		var OpenStreetMap = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+		var WorldImagery = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}');
+		var Mapbox_light = L.tileLayer('https://api.mapbox.com/styles/v1/cherylzuo/cji2tjfdj10032sp4xfjd7nvp/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2hlcnlsenVvIiwiYSI6ImNpeHQzNDBlMjAwMGIycW8xZnoxZXd1ZGIifQ.VJs34ZS05Q2xnJ5y54eZyQ');
+
+		var Mapbox_dark = L.tileLayer('https://api.mapbox.com/styles/v1/cherylzuo/cji2tvfv60zr02rqdsvcl8w0m/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2hlcnlsenVvIiwiYSI6ImNpeHQzNDBlMjAwMGIycW8xZnoxZXd1ZGIifQ.VJs34ZS05Q2xnJ5y54eZyQ');
+
+		
+		
+		
+		///// Configuration de la map	
+		var map = L.map('map', {
+				layers: [OpenStreetMap], /// fond de base
+				center: [31.2, 121.4],/// coordonnées
+				zoom: 4,	//// zoom par defaut
+				// crs: 'EPSG:4326'
+				attribution: 'TUM'
+			});
+		
+
+		/////layers de base		
+		var baseLayers = {
+			"Open Street Map": OpenStreetMap,
+			"World Imagery": WorldImagery,
+			"Light Map": Mapbox_light,
+			"Dark Map": Mapbox_dark
+		};
+
+		//// Add the Find to the map 
+		var osmGeocoder = new L.Control.OSMGeocoder();
+        map.addControl(osmGeocoder);
+
+        ///// Add the Overview to the map 
+        var osm2 = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+		var miniMap = new L.Control.MiniMap(osm2, { toggleDisplay: true }).addTo(map);
+
+		///// Add the scale control to the map
+		L.control.scale().addTo(map);
+
+		///// Add the Navigation Bar to the map 
+		L.control.navbar({position: 'topleft'}).addTo(map);
+
+		///// Add the mouse position to the map 
+		L.control.mousePosition().addTo(map);
+
+		// Zoom control
+		L.control.zoom().addTo(map);
+
+		// var layerwww = L.Polygon(latlngs).bindPopup('Hi There!').addTo(map);
+
+		// Attribution
+		// L.control.attribution({setPrefix: 'TUM'}).addTo(map);
+
+
+		/// layers à partir de Geoserver (format WMS)
+		var points = L.tileLayer.wms("http://localhost:8080/geoserver/first/wms", {
+			layers: 'fitst:points_cn',
+			format: 'image/png',
+			transparent: true,
+			version: '1.1.0',
+			// attribution: "LfK, TUM"
+		});
+		var railways = L.tileLayer.wms("http://localhost:8080/geoserver/first/wms", {
+			layers: 'fitst:railways_cn',
+			format: 'image/png',
+			transparent: true,
+			version: '1.1.0',
+			// attribution: "LfK, TUM"
+		});
+		var buildings = L.tileLayer.wms("http://localhost:8080/geoserver/first/wms", {
+			layers: 'fitst:buildings_cn',
+			format: 'image/png',
+			transparent: true,
+			version: '1.1.0',
+			// attribution: "LfK, TUM"
+		});
+		var landuse = L.tileLayer.wms("http://localhost:8080/geoserver/first/wms", {
+			layers: 'fitst:landuse_cn',
+			format: 'image/png',
+			transparent: true,
+			version: '1.1.0',
+			attribution: "LfK, TUM"
+		});
+		var boundary = L.tileLayer.wms("http://localhost:8080/geoserver/first/wms", {
+			layers: 'fitst:boundary_cn',
+			format: 'image/png',
+			transparent: true,
+			version: '1.1.0',
+			// attribution: "LfK, TUM"
+		});
+
+		var population_2000 = L.tileLayer.wms('http://sedac.ciesin.columbia.edu/geoserver/wms', {
+			layers: 'gpw-v3:gpw-v3-population-density_2000',
+			format: 'image/png',
+			transparent: true,
+			version: '1.1.0'
+		});
+
+
+
+		///// Groupe layers
+		var overlays = {
+			"population_2000": population_2000,
+			"points": points,
+			"railways": railways,
+			"buildings": buildings,
+			"landuse": landuse,
+			"boundary": boundary
+		};
+
+		//add base maps and overlays into the map
+		L.control.layers(baseLayers,overlays).addTo(map);
+
+
+		// legend
+		// var div = L.DomUtil.create('div', 'info-legend');	
+		// 	var titre1 = 'points';
+		// 	contents1 = div.innerHTML = '<br><img src="http://localhost:8080/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=first:points_cn" </img><br>';
+			
+		// 	var titre2 = 'railways';
+		// 	contents2 = div.innerHTML = '<br><img src="http://localhost:8080/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=first:railways_cn" </img><br>';
+
+		// 	var titre3 = 'buildings';
+		// 	contents3 = div.innerHTML = '<br><img src="http://localhost:8080/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=first:buildings_cn" </img><br>';
+			
+		// 	var titre4 = 'landuse';
+		// 	contents4 = div.innerHTML = '<br><img src="http://localhost:8080/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=first:landuse_cn" </img><br>';
+			
+		// 	var titre5 = 'boundary';
+		// 	contents5 = div.innerHTML = '<br><img src="http://localhost:8080/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=first:boundary_cn" </img><br>';
+			
+		// 	// var titre6 = 'support_hta';
+		// 	// contents6 = div.innerHTML = '<br><img src="http://localhost:8080/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=first:support_hta" </img><br>';
+			
+		// 	var slideMenu = L.control.slideMenu('', {position: 'topright', delay: '5'}).addTo(map);
+		// 	slideMenu.setContents(titre1 + contents1 + titre2 + contents2 + titre3 + contents3 + titre4 + contents4 + titre5 + contents5 );//+ titre6 + contents6 );
+
+
+	</script>
+</body>

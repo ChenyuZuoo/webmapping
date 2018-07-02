@@ -79,7 +79,7 @@
 		var map = L.map('map', {
 				layers: [Mapbox_light], /// fond de base
 				center: [31.2, 121.4],/// coordonnées
-				zoom: 6,	//// zoom par defaut
+				zoom: 4,	//// zoom par defaut
 				// crs: 'EPSG:4326'
 				attribution: 'TUM'
 			});
@@ -204,9 +204,39 @@
 
 
         var transportationStyle = {
-            "color": "#1d9545",
+            "color": "#2340b9",
             "weight": 1,
             "opacity": 0.01
+        };
+
+        var nature_resourceStyle = {
+            "color": "#60ee4c",
+            "weight": 1,
+            "opacity": 0.5
+        };
+
+        var tourism_resourceStyle = {
+            "color": "#ee823d",
+            "weight": 1,
+            "opacity": 0.5
+        };
+
+        var educationStyle = {
+            "color": "#ee3b9b",
+            "weight": 1,
+            "opacity": 0.5
+        };
+
+        var energyStyle = {
+            "color": "#4c4a4c",
+            "weight": 1,
+            "opacity": 0.5
+        };
+
+        var pollutionStyle = {
+            "color": "#1b191b",
+            "weight": 1,
+            "opacity": 0.5
         };
 
         var geojsonMarkerOptions = {
@@ -229,6 +259,29 @@
         L.geoJSON(transportation, {
             style: transportationStyle
 		}).addTo(map);
+
+        //add geojson polygon to the map
+        L.geoJSON(nature_resources, {
+            style: nature_resourceStyle
+        }).addTo(map);
+
+        //add geojson polygon to the map
+        L.geoJSON(tourism_resources, {
+            style: tourism_resourceStyle
+        }).addTo(map);
+
+        //add geojson polygon to the map
+        L.geoJSON(education, {
+            style: educationStyle
+        }).addTo(map);
+
+        L.geoJSON(energy, {
+            style: energyStyle
+        }).addTo(map);
+
+        L.geoJSON(pollution, {
+            style: pollutionStyle
+        }).addTo(map);
 
 	</script>
 </body>

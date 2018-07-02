@@ -4,7 +4,6 @@
     <list default="true" id="a2699063-94b8-44a4-9d32-ac00460aa7ac" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/metadata-geojson.js" beforeDir="false" afterPath="$PROJECT_DIR$/metadata-geojson.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,8 +20,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="221" column="35" lean-forward="true" selection-start-line="221" selection-start-column="35" selection-end-line="221" selection-end-column="35" />
+            <state relative-caret-position="1146">
+              <caret line="288" column="40" selection-start-line="288" selection-start-column="40" selection-end-line="288" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -30,8 +29,8 @@
       <file leaf-file-name="metadata-geojson.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/metadata-geojson.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2788">
-              <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+            <state relative-caret-position="1238">
+              <caret line="1004" lean-forward="true" selection-start-line="1004" selection-end-line="1004" />
             </state>
           </provider>
         </entry>
@@ -59,8 +58,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="857" />
-    <option name="y" value="-12" />
+    <option name="x" value="2627" />
+    <option name="y" value="-9" />
     <option name="width" value="985" />
     <option name="height" value="1250" />
   </component>
@@ -122,18 +121,18 @@
       <option name="presentableId" value="Default" />
       <updated>1529324513525</updated>
       <workItem from="1529324514775" duration="16329000" />
-      <workItem from="1529658007158" duration="8884000" />
+      <workItem from="1529658007158" duration="34001000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25213000" />
+    <option name="totallyTimeSpent" value="50330000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="2062" height="1126" extended-state="6" />
+    <frame x="2553" y="-7" width="1166" height="2022" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15820312" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.109375" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -142,7 +141,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.15794669" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.051859614" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -183,15 +182,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/metadata-geojson.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2788">
-          <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+        <state relative-caret-position="1238">
+          <caret line="1004" lean-forward="true" selection-start-line="1004" selection-end-line="1004" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="221" column="35" lean-forward="true" selection-start-line="221" selection-start-column="35" selection-end-line="221" selection-end-column="35" />
+        <state relative-caret-position="1146">
+          <caret line="288" column="40" selection-start-line="288" selection-start-column="40" selection-end-line="288" selection-end-column="40" />
         </state>
       </provider>
     </entry>

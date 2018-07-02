@@ -114,10 +114,10 @@
 		// L.control.zoom().addTo(map);
 
 		// var layerwww = L.Polygon(latlngs).bindPopup('Hi There!').addTo(map);
-
-		// Attribution
-		// L.control.attribution({setPrefix: 'TUM'}).addTo(map);
-
+        var controlLayers = L.control.layers(baseLayers).addTo(map);
+        // controlLayers.addOverlay(baseLayers);
+        // L.control.layers(baseLayers).addTo(map);
+        //
 
 		/// layers à partir de Geoserver (format WMS)
 		var points = L.tileLayer.wms("http://localhost:8080/geoserver/first/wms", {
@@ -176,7 +176,7 @@
 		};
 
 		//add base maps and overlays into the map
-		L.control.layers(baseLayers,overlays).addTo(map);
+		// L.control.layers(baseLayers,overlays).addTo(map);
 
 
 		// legend
@@ -256,32 +256,40 @@
         }).addTo(map);
 
         //add geojson polygon to the map
-        L.geoJSON(transportation, {
+        var transportation = L.geoJSON(transportation, {
             style: transportationStyle
-		}).addTo(map);
+        }).addTo(map);
 
         //add geojson polygon to the map
-        L.geoJSON(nature_resources, {
+        var nature = L.geoJSON(nature_resources, {
             style: nature_resourceStyle
         }).addTo(map);
 
         //add geojson polygon to the map
-        L.geoJSON(tourism_resources, {
+        var tourism = L.geoJSON(tourism_resources, {
             style: tourism_resourceStyle
         }).addTo(map);
 
         //add geojson polygon to the map
-        L.geoJSON(education, {
+        var edu = L.geoJSON(education, {
             style: educationStyle
         }).addTo(map);
 
-        L.geoJSON(energy, {
+        var energy = L.geoJSON(energy, {
             style: energyStyle
         }).addTo(map);
 
-        L.geoJSON(pollution, {
+        var pollution = L.geoJSON(pollution, {
             style: pollutionStyle
         }).addTo(map);
+
+		controlLayers.addOverlay(transportation, 'Transportation');
+        controlLayers.addOverlay(nature, 'Nature resources');
+        controlLayers.addOverlay(tourism, 'Tourism resources');
+        controlLayers.addOverlay(edu, 'Education');
+        controlLayers.addOverlay(energy, 'Energy');
+        controlLayers.addOverlay(pollution, 'Pollution');
+
 
 	</script>
 </body>

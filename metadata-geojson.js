@@ -66,7 +66,7 @@ var transportation = {
                 "description": "'Type' is the rail way station type: 1 for freight station, 2 for passenger station, -1 for unknown. 'rank' is the level of the stations.",
                 "storageLocation": "Y:\\06_Geodata\\2018_Yangtze_Delta_Data\\3 1 250k The distribution and statistical data of the railways in the Yangtze River Delta(2013)"
             },
-            "id": 3.3
+            "id": 303
         },
         {
             "geometry": {
@@ -97,7 +97,7 @@ var transportation = {
                 "description": "",
                 "storageLocation": "Y:\\06_Geodata\\2018_Yangtze_Delta_Data\\3 1 250k The distribution and statistical data of the railways in the Yangtze River Delta(2013)"
             },
-            "id": 3.2
+            "id": 302
         },
         {
             "geometry": {
@@ -128,7 +128,7 @@ var transportation = {
                 "description": "province boundaries",
                 "storageLocation": "Y:\\06_Geodata\\2018_Yangtze_Delta_Data\\3 1 250k The distribution and statistical data of the railways in the Yangtze River Delta(2013)"
             },
-            "id": 3.1
+            "id": 301
         },
         {
             "geometry": {
@@ -159,7 +159,7 @@ var transportation = {
                 "description": "the distribution of the ports and attributes",
                 "storageLocation": "Y:\\06_Geodata\\2018_Yangtze_Delta_Data\\4 1 250k Distribution and statistical data of major ports in the Yangtze River Delta(2013)\\1250k Distribution and statistical data of major ports in the Yangtze River Delta  (2013)\\port"
             },
-            "id": 4.1
+            "id": 401
         },
         {
             "geometry": {
@@ -190,7 +190,7 @@ var transportation = {
                 "description": "the distribution of the ports and attributes",
                 "storageLocation": "Y:\\06_Geodata\\2018_Yangtze_Delta_Data\\4 1 250k Distribution and statistical data of major ports in the Yangtze River Delta(2013)\\1250k Distribution and statistical data of major ports in the Yangtze River Delta  (2013)\\port"
             },
-            "id": 4.2
+            "id": 402
         },
         {
             "geometry": {
@@ -221,7 +221,7 @@ var transportation = {
                 "description": "the distribution of the roads, including national roads, province road, contry road and channels",
                 "storageLocation": "Y:\\06_Geodata\\2018_Yangtze_Delta_Data\\5 1 250k road data in Jiangsu province(1990-2015 years)\\1 250k road data in Jiangsu province (1990-2015 years)"
             },
-            "id": 5.1
+            "id": 501
         },
         {
             "geometry": {
@@ -252,7 +252,7 @@ var transportation = {
                 "description": "the distribution of the roads, including national roads, province road, contry road and channels",
                 "storageLocation": "Y:\\06_Geodata\\2018_Yangtze_Delta_Data\\5 1 250k road data in Jiangsu province(1990-2015 years)\\1 250k road data in Jiangsu province (1990-2015 years)"
             },
-            "id": 5.2
+            "id": 502
         },
         {
             "geometry": {
@@ -283,7 +283,7 @@ var transportation = {
                 "description": "the distribution of the roads, including national roads, province road, contry road and channels",
                 "storageLocation": "Y:\\06_Geodata\\2018_Yangtze_Delta_Data\\5 1 250k road data in Jiangsu province(1990-2015 years)\\1 250k road data in Jiangsu province (1990-2015 years)"
             },
-            "id": 5.3
+            "id": 503
         },
         {
             "geometry": {
@@ -314,7 +314,7 @@ var transportation = {
                 "description": "the distribution of the roads, including national roads, province road, contry road and channels",
                 "storageLocation": "Y:\\06_Geodata\\2018_Yangtze_Delta_Data\\5 1 250k road data in Jiangsu province(1990-2015 years)\\1 250k road data in Jiangsu province (1990-2015 years)"
             },
-            "id": 5.4
+            "id": 504
         },
     ]
 };
@@ -352,7 +352,7 @@ var tourism_resources = {
                 "description": "Information about scenic spots, including name, area, level and ect.)",
                 "storageLocation": "Y:\\06_Geodata\\2018_Yangtze_Delta_Data\\47 The 1 250K spatial distribution data of scenic spots and National Geopark in the Yangtze River Delta(Jiangsu Province)(2013)"
             },
-            "id": 47.1
+            "id": 4701
         },
         {
             "geometry": {
@@ -383,7 +383,7 @@ var tourism_resources = {
                 "description": "Information about scenic spots, including name, area, level and ect.",
                 "storageLocation": "Y:\\06_Geodata\\2018_Yangtze_Delta_Data\\47 The 1 250K spatial distribution data of scenic spots and National Geopark in the Yangtze River Delta(Jiangsu Province)(2013)"
             },
-            "id": 47.2
+            "id": 4702
         },
         {
             "geometry": {
@@ -414,7 +414,7 @@ var tourism_resources = {
                 "description": "Information about scenic spots, including name, area, level and ect.)",
                 "storageLocation": "Y:\\06_Geodata\\2018_Yangtze_Delta_Data\\47 The 1 250K spatial distribution data of scenic spots and National Geopark in the Yangtze River Delta(Jiangsu Province)(2013)"
             },
-            "id": 47.3
+            "id": 4703
         },
         {
             "geometry": {
@@ -445,7 +445,7 @@ var tourism_resources = {
                 "description": "Information about national protected antiques, including address and name.",
                 "storageLocation": "Y:\\06_Geodata\\2018_Yangtze_Delta_Data\\50 The 1 250K  the state key cultural relics protection units in the Yangtze River Delta (Jiangsu province)  (2013)"
             },
-            "id": 50
+            "id": 5001
         },
         {
             "geometry": {
@@ -476,7 +476,7 @@ var tourism_resources = {
                 "description": "Information about natural reserves, including name, type, area, time, address and etc.",
                 "storageLocation": "Y:\\06_Geodata\\2018_Yangtze_Delta_Data\\53 The 1 250K  Nature Reserve in the Yangtze River Delta (Jiangsu) (2013)"
             },
-            "id": 53
+            "id": 5301
         },
     ]
 };
@@ -513,7 +513,7 @@ var nature_resources = {
                 "description": "Description of soil types, e.g. chernozem, red soil,  alpine desert soil",
                 "storageLocation": "Y:\\06_Geodata\\2018_Yangtze_Delta_Data\\12 1 1000k Soil type map in the Yangtze River Basin(2015)"
             },
-            "id": 12.1
+            "id": 1201
         },
         {
             "geometry": {
@@ -544,7 +544,7 @@ var nature_resources = {
                 "description": "Description of soil types, e.g. chernozem, red soil,  alpine desert soil",
                 "storageLocation": "Y:\\06_Geodata\\2018_Yangtze_Delta_Data\\12 1 1000k Soil type map in the Yangtze River Basin(2015)"
             },
-            "id": 12.2
+            "id": 1202
         },
         {
             "geometry": {
@@ -575,7 +575,7 @@ var nature_resources = {
                 "description": "1-Arable land, 2-Forest, 3-Grassland, 4-Waterbody, 5-Building, 6-unuse",
                 "storageLocation": "Y:\\06_Geodata\\2018_Yangtze_Delta_Data\\15 The 1 100K land use data set in the Yangtze River Delta(2010)"
             },
-            "id": 15
+            "id": 1501
         },
         {
             "geometry": {
@@ -606,7 +606,7 @@ var nature_resources = {
                 "description": "information of wetlands, including area, name, soil type, vegetation, climate and ect.",
                 "storageLocation": "Y:\\06_Geodata\\2018_Yangtze_Delta_Data\\20  The 1 1000K Spatial distribution data of wetlands in the Yangtze River Delta region(2000)"
             },
-            "id": 20
+            "id": 2001
         },
         {
             "geometry": {
@@ -637,7 +637,7 @@ var nature_resources = {
                 "description": "information of mineral, including area, name, and resource type(mineral water, geothermal, copper and stc.)",
                 "storageLocation": "Y:\\06_Geodata\\2018_Yangtze_Delta_Data\\44 The 1 250k mineral resources distribution data set in the Yangtze River Delta (Jiangsu) (2015)"
             },
-            "id": 44
+            "id": 4401
         },
     ]
 };
@@ -674,7 +674,7 @@ var education = {
                 "description": "Name of the entity",
                 "storageLocation": "Y:\\06_Geodata\\2018_Yangtze_Delta_Data\\56 1 250K distribution data of educational resources in the Yangtze River Delta (2015)"
             },
-            "id": 56.1
+            "id": 5601
         },
         {
             "geometry": {
@@ -705,7 +705,7 @@ var education = {
                 "description": "Name of the entity",
                 "storageLocation": "Y:\\06_Geodata\\2018_Yangtze_Delta_Data\\56 1 250K distribution data of educational resources in the Yangtze River Delta (2015)"
             },
-            "id": 56.2
+            "id": 5602
         },
         {
             "geometry": {
@@ -736,7 +736,7 @@ var education = {
                 "description": "Name of the entity",
                 "storageLocation": "Y:\\06_Geodata\\2018_Yangtze_Delta_Data\\56 1 250K distribution data of educational resources in the Yangtze River Delta (2015)"
             },
-            "id": 56.3
+            "id": 5603
         },
         {
             "geometry": {
@@ -767,7 +767,7 @@ var education = {
                 "description": "Name of the entity",
                 "storageLocation": "Y:\\06_Geodata\\2018_Yangtze_Delta_Data\\56 1 250K distribution data of educational resources in the Yangtze River Delta (2015)"
             },
-            "id": 56.4
+            "id": 5604
         },
     ]
 };
@@ -804,7 +804,7 @@ var energy = {
                 "description": "Distribution of the power plants",
                 "storageLocation": "Y:\\06_Geodata\\2018_Yangtze_Delta_Data\\57 1 250K Distribution data of major thermal power plants in the Yangtze River Delta (Jiangsu)(2014)"
             },
-            "id": 57.1
+            "id": 5701
         },
         {
             "geometry": {
@@ -835,7 +835,7 @@ var energy = {
                 "description": "220V power nets",
                 "storageLocation": "Y:\\06_Geodata\\2018_Yangtze_Delta_Data\\57 1 250K Distribution data of major thermal power plants in the Yangtze River Delta (Jiangsu)(2014)"
             },
-            "id": 57.2
+            "id": 5702
         },
         {
             "geometry": {
@@ -866,7 +866,7 @@ var energy = {
                 "description": "500V power nets",
                 "storageLocation": "Y:\\06_Geodata\\2018_Yangtze_Delta_Data\\57 1 250K Distribution data of major thermal power plants in the Yangtze River Delta (Jiangsu)(2014)"
             },
-            "id": 57.3
+            "id": 5703
         },
         {
             "geometry": {
@@ -897,7 +897,7 @@ var energy = {
                 "description": "500V power nets under construction",
                 "storageLocation": "Y:\\06_Geodata\\2018_Yangtze_Delta_Data\\57 1 250K Distribution data of major thermal power plants in the Yangtze River Delta (Jiangsu)(2014)"
             },
-            "id": 57.4
+            "id": 5704
         },
         {
             "geometry": {
@@ -928,7 +928,7 @@ var energy = {
                 "description": "500V DC power",
                 "storageLocation": "Y:\\06_Geodata\\2018_Yangtze_Delta_Data\\57 1 250K Distribution data of major thermal power plants in the Yangtze River Delta (Jiangsu)(2014)"
             },
-            "id": 57.5
+            "id": 5705
         },
     ]
 };
@@ -965,7 +965,7 @@ var pollution = {
                 "description": "Distribution of the key industrial pollution sources in Jiangsu.",
                 "storageLocation": "Y:\\06_Geodata\\2018_Yangtze_Delta_Data\\58 1 250K Distribution data of key industrial pollution sources in the Yangtze River Delta(Jiangsu)(2014)"
             },
-            "id": 58
+            "id": 5801
         },
         {
             "geometry": {
@@ -996,7 +996,7 @@ var pollution = {
                 "description": "Distribution of the sewage treatment plants in Jiangsu.",
                 "storageLocation": "Y:\\06_Geodata\\2018_Yangtze_Delta_Data\\59 1 250K spatial distribution data of  sewage treatment plants in Yangtze River Delta(Jiangsu)(2014)"
             },
-            "id": 58
+            "id": 5802
         },
     ]
 };

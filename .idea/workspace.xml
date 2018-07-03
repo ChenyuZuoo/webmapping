@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2699063-94b8-44a4-9d32-ac00460aa7ac" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metadata-geojson.js" beforeDir="false" afterPath="$PROJECT_DIR$/metadata-geojson.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,9 +20,11 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="874">
-              <caret line="264" column="17" selection-start-line="264" selection-start-column="17" selection-end-line="264" selection-end-column="17" />
+            <state relative-caret-position="749">
+              <caret line="343" column="52" selection-start-line="343" selection-start-column="52" selection-end-line="343" selection-end-column="52" />
               <folding>
+                <element signature="e#0#6#0" expanded="true" />
+                <element signature="e#0#6#0" expanded="true" />
                 <element signature="e#0#6#0" expanded="true" />
               </folding>
             </state>
@@ -32,8 +34,8 @@
       <file leaf-file-name="metadata-geojson.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/metadata-geojson.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1238">
-              <caret line="1004" lean-forward="true" selection-start-line="1004" selection-end-line="1004" />
+            <state relative-caret-position="1462">
+              <caret line="998" column="22" selection-start-line="998" selection-start-column="22" selection-end-line="998" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -61,7 +63,7 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2627" />
+    <option name="x" value="2790" />
     <option name="y" value="-9" />
     <option name="width" value="985" />
     <option name="height" value="1250" />
@@ -124,12 +126,12 @@
       <option name="presentableId" value="Default" />
       <updated>1529324513525</updated>
       <workItem from="1529324514775" duration="16329000" />
-      <workItem from="1529658007158" duration="35732000" />
+      <workItem from="1529658007158" duration="39444000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52061000" />
+    <option name="totallyTimeSpent" value="55773000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2553" y="-7" width="1166" height="2022" extended-state="6" />
@@ -175,6 +177,8 @@
           <caret line="201" column="56" lean-forward="true" selection-start-line="201" selection-start-column="56" selection-end-line="201" selection-end-column="56" />
           <folding>
             <element signature="e#0#6#0" expanded="true" />
+            <element signature="e#0#6#0" expanded="true" />
+            <element signature="e#0#6#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -188,16 +192,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/metadata-geojson.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1238">
-          <caret line="1004" lean-forward="true" selection-start-line="1004" selection-end-line="1004" />
+        <state relative-caret-position="1462">
+          <caret line="998" column="22" selection-start-line="998" selection-start-column="22" selection-end-line="998" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
-          <caret line="264" column="17" selection-start-line="264" selection-start-column="17" selection-end-line="264" selection-end-column="17" />
+        <state relative-caret-position="749">
+          <caret line="343" column="52" selection-start-line="343" selection-start-column="52" selection-end-line="343" selection-end-column="52" />
           <folding>
+            <element signature="e#0#6#0" expanded="true" />
+            <element signature="e#0#6#0" expanded="true" />
             <element signature="e#0#6#0" expanded="true" />
           </folding>
         </state>

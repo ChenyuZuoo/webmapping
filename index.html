@@ -68,11 +68,17 @@
     <script>
 	
 		///// Fond de base
-		var OpenStreetMap = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+		var OpenStreetMap = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
+        });
 		var WorldImagery = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}');
-		var Mapbox_light = L.tileLayer('https://api.mapbox.com/styles/v1/cherylzuo/cji2tjfdj10032sp4xfjd7nvp/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2hlcnlsenVvIiwiYSI6ImNpeHQzNDBlMjAwMGIycW8xZnoxZXd1ZGIifQ.VJs34ZS05Q2xnJ5y54eZyQ');
+		var Mapbox_light = L.tileLayer('https://api.mapbox.com/styles/v1/cherylzuo/cji2tjfdj10032sp4xfjd7nvp/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2hlcnlsenVvIiwiYSI6ImNpeHQzNDBlMjAwMGIycW8xZnoxZXd1ZGIifQ.VJs34ZS05Q2xnJ5y54eZyQ', {
+            attribution: '&copy; <a href="https://www.mapbox.com/">Mapbox</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
+        });
 
-		var Mapbox_dark = L.tileLayer('https://api.mapbox.com/styles/v1/cherylzuo/cji2tvfv60zr02rqdsvcl8w0m/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2hlcnlsenVvIiwiYSI6ImNpeHQzNDBlMjAwMGIycW8xZnoxZXd1ZGIifQ.VJs34ZS05Q2xnJ5y54eZyQ');
+		var Mapbox_dark = L.tileLayer('https://api.mapbox.com/styles/v1/cherylzuo/cji2tvfv60zr02rqdsvcl8w0m/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2hlcnlsenVvIiwiYSI6ImNpeHQzNDBlMjAwMGIycW8xZnoxZXd1ZGIifQ.VJs34ZS05Q2xnJ5y54eZyQ', {
+            attribution: '&copy; <a href="https://www.mapbox.com/">Mapbox</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
+        });
 
 
 		///// Configuration the base map
@@ -249,11 +255,11 @@
         };
 
         // add geojson points to the map
-        L.geoJSON(geojsonFeature, {
-            pointToLayer: function (feature, latlng) {
-                return L.circleMarker(latlng, geojsonMarkerOptions);
-            }
-        }).addTo(map);
+        // L.geoJSON(geojsonFeature, {
+        //     pointToLayer: function (feature, latlng) {
+        //         return L.circleMarker(latlng, geojsonMarkerOptions);
+        //     }
+        // }).addTo(map);
 
         //add geojson polygon to the map
         var transportation = L.geoJSON(transportation, {

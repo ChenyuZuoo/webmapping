@@ -204,7 +204,11 @@
 		// 	slideMenu.setContents(titre1 + contents1 + titre2 + contents2 + titre3 + contents3 + titre4 + contents4 + titre5 + contents5 );//+ titre6 + contents6 );
 
 
-		//----------------------------------------------------------------------------------
+
+
+
+
+        //----------------------------------------------------------------------------------
 		// colour computing
         //----------------------------------------------------------------------------------
 
@@ -300,32 +304,33 @@
         // }).addTo(map);
 
         //add geojson polygon to the map
-        var transportation = L.geoJSON(transportation, {
-            style: transportationStyle
-        });//.addTo(map);
+        var transportation = new L.geoJSON(transportation, {
+            style: transportationStyle,
+			onEachFeature: layersOnEachFeature
+        });
 
         //add geojson polygon to the map
-        var nature = L.geoJSON(nature_resources, {
+        var nature = new L.geoJSON(nature_resources, {
             style: nature_resourceStyle
-        });//.addTo(map);
+        });
 
         //add geojson polygon to the map
-        var tourism = L.geoJSON(tourism_resources, {
+        var tourism = new L.geoJSON(tourism_resources, {
             style: tourism_resourceStyle
-        });//.addTo(map);
+        });
 
         //add geojson polygon to the map
-        var edu = L.geoJSON(education, {
+        var edu = new L.geoJSON(education, {
             style: educationStyle
-        });//.addTo(map);
+        });
 
-        var energy = L.geoJSON(energy, {
+        var energy = new L.geoJSON(energy, {
             style: energyStyle
-        });//.addTo(map);
+        });
 
-        var pollution = L.geoJSON(pollution, {
+        var pollution = new L.geoJSON(pollution, {
             style: pollutionStyle
-        });//.addTo(map);
+        });
 
 		var overlays_geojson = {
 		    "Transportation": transportation,
@@ -338,6 +343,60 @@
 
 		// add layer control to the map, overlays invisible by default
         L.control.layers(baseLayers,overlays_geojson).addTo(map);
+
+        //----------------------------------------------------------------------------------
+        // info box
+        //----------------------------------------------------------------------------------
+
+
+        var info = L.control();
+
+        info.onAdd = function (map) {
+            this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
+            this.update();
+            return this._div;
+        };
+
+        // method that we will use to update the control based on feature properties pacssed
+        info.update = function (props) {
+            this._div.innerHTML = '<h4>Data Information</h4>' +  (props ?
+                '<b>' + props.title + '</b>' +'  '+ props.year
+                : 'Choose a category');
+        };
+
+        info.addTo(map);
+
+        function highlightFeature(e) {
+            info.update(layer.feature.properties);
+            console.log('highlightFeature');
+        }
+
+        function resetHighlight(e) {
+            info.update();
+        }
+
+        function layersOnEachFeature(feature, layer) {
+            layer.on({
+                overlayadd: highlightFeature,
+                overlayremove: resetHighlight
+            });
+        }
+
+		map.on("overlayadd overlayremove", function (event) {
+			var layer = event.layer;
+
+			if (event.type == "overlayadd"){
+				for(var l in layer._layers){
+					var properties = layer._layers[l].feature.properties;
+					// console.log(properties)
+					info.update(properties)
+				};
+
+			} else {
+                console.log('removed');
+			    info.update();
+			}
+		});
 
 
 	</script>

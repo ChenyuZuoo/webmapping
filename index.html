@@ -363,24 +363,7 @@
         };
 
         info.addTo(map);
-
-        function highlightFeature(e) {
-            info.update(layer.feature.properties);
-            console.log('highlightFeature');
-        }
-
-        function resetHighlight(e) {
-            info.update();
-        }
-
-        function layersOnEachFeature(feature, layer) {
-            layer.on({
-                overlayadd: highlightFeature,
-                overlayremove: resetHighlight
-            });
-        }
-
-
+		
 		// list of on display overlays
         var layerDisplay = [];
 

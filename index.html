@@ -119,6 +119,9 @@
 		// Zoom control
 		// L.control.zoom().addTo(map);
 
+        //----------------------------------------------------------------------------------
+        // layers from WMS
+        //----------------------------------------------------------------------------------
 
 		/// layers à partir de Geoserver (format WMS)
 		var points = L.tileLayer.wms("http://localhost:8080/geoserver/first/wms", {
@@ -165,7 +168,6 @@
 		});
 
 
-
 		///// Groupe layers
 		var overlays = {
 			"population_2000": population_2000,
@@ -176,8 +178,6 @@
 			"boundary": boundary
 		};
 
-		//add base maps and overlays into the map
-		// L.control.layers(baseLayers,overlays).addTo(map);
 
 
 		// legend
@@ -306,7 +306,7 @@
         //add geojson polygon to the map
         var transportation = new L.geoJSON(transportation, {
             style: transportationStyle,
-			onEachFeature: layersOnEachFeature
+			// onEachFeature: layersOnEachFeature
         });
 
         //add geojson polygon to the map
@@ -359,9 +359,7 @@
 
         // method that we will use to update the control based on feature properties pacssed
         info.update = function (props) {
-            this._div.innerHTML = '<h4>Data Information</h4>' +  (props ?
-                '<b>' + props.title + '</b>' +'  '+ props.year
-                : 'Choose a category');
+            this._div.innerHTML = '<h4>Data Information</h4>' +  (props ? props : 'Choose a category');
         };
 
         info.addTo(map);
@@ -382,20 +380,69 @@
             });
         }
 
+
+		// list of on display overlays
+        var layerDisplay = [];
+
+
 		map.on("overlayadd overlayremove", function (event) {
 			var layer = event.layer;
+			// console.log(layer);
+
+            // get the information from all overlays
+            var allLayers = Object.values(overlays_geojson);
 
 			if (event.type == "overlayadd"){
-				for(var l in layer._layers){
-					var properties = layer._layers[l].feature.properties;
-					// console.log(properties)
-					info.update(properties)
+
+				// when a layer is added, push the layer information into the list
+				for (var l in allLayers){
+				    if (layer === allLayers[l]){
+                        layerDisplay.push(layer);
+                        // console.log('onAdd: ');
+                        // console.log(layerDisplay);
+					};
 				};
 
-			} else {
-                console.log('removed');
+			} else if(event.type == "overlayremove"){
+
+                // when a layer is removed, pop the layer information out of the list
+                for (var l in layerDisplay){
+                    if (layer === layerDisplay[l]){
+                        layerDisplay.splice(l,1);
+                        // console.log('remove');
+                        // console.log(layerDisplay.length);
+
+                    };
+                };
+                // console.log('onRemove: ');
+                // console.log(layerDisplay);
+			};
+
+			// if no overlays, display default info
+			if (layerDisplay.length == 0){
 			    info.update();
+			    return
 			}
+
+            // overlay info box
+            var data_info = '';
+
+            // Tget the information from layerDisplay and send it to update
+            for(var l in layerDisplay){
+			    // console.log('l: '+ l)
+				var tmplayer = layerDisplay[l]._layers;
+				for(var i in tmplayer){
+				    // console.log('i:' + i)
+                    var properties = tmplayer[i].feature.properties;
+                    data_info += properties.title + '  ' + properties.year + '<br\>';
+                    // console.log(data_info)
+				}
+				data_info += '<br\>'
+            }
+
+			info.update(data_info);
+			// console.log('onDisplay: ');
+			// console.log(layerDisplay);
 		});
 
 

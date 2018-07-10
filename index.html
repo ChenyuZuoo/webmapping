@@ -234,6 +234,27 @@
         //     }
         // }).addTo(map);
 
+        //----------------------------------------------------------------------------------
+        // time slider geojson filter
+        //----------------------------------------------------------------------------------
+
+		function geojsonTimeFilter(geojson, startTime, endTime) {
+		    var tGeojson = geojson;
+		    var layers = geojson._layers;
+
+			for (var l in layers){
+			    var year = parseInt(layers[l].feature.properties.year);
+			    if (year < startTime){
+			        // if layer year lower than startTime, remove the layer from geojson
+			        delete tGeojson._layers[l];
+				} else if (year > endTime){
+                    delete tGeojson._layers[l];
+				}
+			}
+			return tGeojson;
+        }
+
+
         //add geojson polygon to the map
         var transportation = new L.geoJSON(transportation, {
             style: transportationStyle,
@@ -275,7 +296,7 @@
 		// add layer control to the map, overlays invisible by default
         L.control.layers(baseLayers,overlays_geojson).addTo(map);
 
-        
+
         //----------------------------------------------------------------------------------
         // info box
         //----------------------------------------------------------------------------------
@@ -289,7 +310,7 @@
 
         // method that we will use to update the control based on feature properties pacssed
         info.update = function (props) {
-            this._div.innerHTML = '<h4>Data Information</h4>' +  (props ? props : 'Choose a category');
+            this._div.innerHTML = '<h4>Dataset Information</h4>' +  (props ? props : 'Choose a category');
         };
 
         info.addTo(map);
@@ -324,7 +345,6 @@
                         layerDisplay.splice(l,1);
                         // console.log('remove');
                         // console.log(layerDisplay.length);
-
                     };
                 };
                 // console.log('onRemove: ');

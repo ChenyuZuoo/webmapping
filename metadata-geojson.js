@@ -1,4 +1,6 @@
 //geojson file
+
+// start of test geojson----------------------------------------------------------------------------------------------
 var geojsonFeature = {
     "type": "FeatureCollection",
     "features": [
@@ -32,6 +34,7 @@ var geojsonFeature = {
         }
     ]
 };
+// end of test geojson----------------------------------------------------------------------------------------------
 
 
 var transportation = {
@@ -207,7 +210,7 @@ var transportation = {
             },
             "type": "Feature",
             "properties": {
-                "title": "road",
+                "title": "Road",
                 "year": "1990",
                 "scale": "1:250,000",
                 "projection": "WGS84",
@@ -238,7 +241,7 @@ var transportation = {
             },
             "type": "Feature",
             "properties": {
-                "title": "road",
+                "title": "Road",
                 "year": "1996",
                 "scale": "1:250,000",
                 "projection": "WGS84",
@@ -269,7 +272,7 @@ var transportation = {
             },
             "type": "Feature",
             "properties": {
-                "title": "road",
+                "title": "Road",
                 "year": "2002",
                 "scale": "1:250,000",
                 "projection": "WGS84",
@@ -300,8 +303,8 @@ var transportation = {
             },
             "type": "Feature",
             "properties": {
-                "title": "road",
-                "year": "2002",
+                "title": "Road",
+                "year": "2008",
                 "scale": "1:250,000",
                 "projection": "WGS84",
                 "format": "shapefile",

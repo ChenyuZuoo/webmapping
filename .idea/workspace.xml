@@ -19,8 +19,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="373" column="45" selection-start-line="373" selection-start-column="45" selection-end-line="373" selection-end-column="45" />
+            <state relative-caret-position="560">
+              <caret line="279" lean-forward="true" selection-start-line="279" selection-end-line="279" />
               <folding>
                 <element signature="e#0#6#0" expanded="true" />
                 <element signature="e#0#6#0" expanded="true" />
@@ -137,12 +137,12 @@
       <option name="presentableId" value="Default" />
       <updated>1529324513525</updated>
       <workItem from="1529324514775" duration="16329000" />
-      <workItem from="1529658007158" duration="93019000" />
+      <workItem from="1529658007158" duration="103637000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109348000" />
+    <option name="totallyTimeSpent" value="119966000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2553" y="-7" width="1166" height="2022" extended-state="6" />
@@ -157,7 +157,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.08328968" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.07962284" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -197,7 +197,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="28" />
+      <option name="time" value="31" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JavascriptDebugType">
@@ -260,8 +260,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="373" column="45" selection-start-line="373" selection-start-column="45" selection-end-line="373" selection-end-column="45" />
+        <state relative-caret-position="560">
+          <caret line="279" lean-forward="true" selection-start-line="279" selection-end-line="279" />
           <folding>
             <element signature="e#0#6#0" expanded="true" />
             <element signature="e#0#6#0" expanded="true" />

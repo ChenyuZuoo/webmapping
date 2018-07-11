@@ -68,122 +68,122 @@
     <div id="map"></div>
 	<div id="timeline"></div>
 	<script src="metadata-geojson.js" type="text/javascript"></script>
-    <script>
-	
-		///// Fond de base
-		var OpenStreetMap = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	<script src="dist/vis.js"></script>
+	<script>
+        ///// Fond de base
+        var OpenStreetMap = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
         });
-		var WorldImagery = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}');
-		var Mapbox_light = L.tileLayer('https://api.mapbox.com/styles/v1/cherylzuo/cji2tjfdj10032sp4xfjd7nvp/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2hlcnlsenVvIiwiYSI6ImNpeHQzNDBlMjAwMGIycW8xZnoxZXd1ZGIifQ.VJs34ZS05Q2xnJ5y54eZyQ', {
+        var WorldImagery = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}');
+        var Mapbox_light = L.tileLayer('https://api.mapbox.com/styles/v1/cherylzuo/cji2tjfdj10032sp4xfjd7nvp/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2hlcnlsenVvIiwiYSI6ImNpeHQzNDBlMjAwMGIycW8xZnoxZXd1ZGIifQ.VJs34ZS05Q2xnJ5y54eZyQ', {
             attribution: '&copy; <a href="https://www.mapbox.com/">Mapbox</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
         });
 
-		var Mapbox_dark = L.tileLayer('https://api.mapbox.com/styles/v1/cherylzuo/cji2tvfv60zr02rqdsvcl8w0m/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2hlcnlsenVvIiwiYSI6ImNpeHQzNDBlMjAwMGIycW8xZnoxZXd1ZGIifQ.VJs34ZS05Q2xnJ5y54eZyQ', {
+        var Mapbox_dark = L.tileLayer('https://api.mapbox.com/styles/v1/cherylzuo/cji2tvfv60zr02rqdsvcl8w0m/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2hlcnlsenVvIiwiYSI6ImNpeHQzNDBlMjAwMGIycW8xZnoxZXd1ZGIifQ.VJs34ZS05Q2xnJ5y54eZyQ', {
             attribution: '&copy; <a href="https://www.mapbox.com/">Mapbox</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
         });
 
 
-		///// Configuration the base map
-		var map = L.map('map', {
-				layers: [Mapbox_light], /// fond de base
-				center: [31.2, 121.4],/// coordonnées
-				zoom: 4,	//// zoom par defaut
-				// crs: 'EPSG:4326'
-				attribution: 'TUM'
-			});
-		
+        ///// Configuration the base map
+        var map = L.map('map', {
+            layers: [Mapbox_light], /// fond de base
+            center: [31.2, 121.4],/// coordonnées
+            zoom: 4,	//// zoom par defaut
+            // crs: 'EPSG:4326'
+            attribution: 'TUM'
+        });
 
-		/////layers de base		
-		var baseLayers = {
-			"Open Street Map": OpenStreetMap,
-			"World Imagery": WorldImagery,
-			"Light Map": Mapbox_light,
-			"Dark Map": Mapbox_dark
-		};
 
-		//// Add the Search function to the map
-		var osmGeocoder = new L.Control.OSMGeocoder();
+        /////layers de base
+        var baseLayers = {
+            "Open Street Map": OpenStreetMap,
+            "World Imagery": WorldImagery,
+            "Light Map": Mapbox_light,
+            "Dark Map": Mapbox_dark
+        };
+
+        //// Add the Search function to the map
+        var osmGeocoder = new L.Control.OSMGeocoder();
         map.addControl(osmGeocoder);
 
-        ///// Add the Overview to the map 
+        ///// Add the Overview to the map
         var osm2 = L.tileLayer('https://api.mapbox.com/styles/v1/cherylzuo/cji2tjfdj10032sp4xfjd7nvp/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2hlcnlsenVvIiwiYSI6ImNpeHQzNDBlMjAwMGIycW8xZnoxZXd1ZGIifQ.VJs34ZS05Q2xnJ5y54eZyQ');
         var miniMap = new L.Control.MiniMap(osm2, { toggleDisplay: true }).addTo(map);
 
-		///// Add the scale control to the map
-		L.control.scale().addTo(map);
+        ///// Add the scale control to the map
+        L.control.scale().addTo(map);
 
-		///// Add the Navigation and Home Bar to the map
-		L.control.navbar({position: 'topleft'}).addTo(map);
+        ///// Add the Navigation and Home Bar to the map
+        L.control.navbar({position: 'topleft'}).addTo(map);
 
-		///// Add the mouse position to the map 
-		L.control.mousePosition().addTo(map);
+        ///// Add the mouse position to the map
+        L.control.mousePosition().addTo(map);
 
-		// Zoom control
-		// L.control.zoom().addTo(map);
+        // Zoom control
+        // L.control.zoom().addTo(map);
 
         //----------------------------------------------------------------------------------
         // layers from WMS
         //----------------------------------------------------------------------------------
 
-		/// layers from Geoserver (format WMS)
-		var points = L.tileLayer.wms("http://localhost:8080/geoserver/first/wms", {
-			layers: 'fitst:points_cn',
-			format: 'image/png',
-			transparent: true,
-			version: '1.1.0',
-			// attribution: "LfK, TUM"
-		});
-		var railways = L.tileLayer.wms("http://localhost:8080/geoserver/first/wms", {
-			layers: 'fitst:railways_cn',
-			format: 'image/png',
-			transparent: true,
-			version: '1.1.0',
-			// attribution: "LfK, TUM"
-		});
-		var buildings = L.tileLayer.wms("http://localhost:8080/geoserver/first/wms", {
-			layers: 'fitst:buildings_cn',
-			format: 'image/png',
-			transparent: true,
-			version: '1.1.0',
-			// attribution: "LfK, TUM"
-		});
-		var landuse = L.tileLayer.wms("http://localhost:8080/geoserver/first/wms", {
-			layers: 'fitst:landuse_cn',
-			format: 'image/png',
-			transparent: true,
-			version: '1.1.0',
-			attribution: "LfK, TUM"
-		});
-		var boundary = L.tileLayer.wms("http://localhost:8080/geoserver/first/wms", {
-			layers: 'fitst:boundary_cn',
-			format: 'image/png',
-			transparent: true,
-			version: '1.1.0',
-			// attribution: "LfK, TUM"
-		});
-
-		var population_2000 = L.tileLayer.wms('http://sedac.ciesin.columbia.edu/geoserver/wms', {
-			layers: 'gpw-v3:gpw-v3-population-density_2000',
-			format: 'image/png',
-			transparent: true,
-			version: '1.1.0'
-		});
-
-
-		// Groupe layers
-		var overlays = {
-			"population_2000": population_2000,
-			"points": points,
-			"railways": railways,
-			"buildings": buildings,
-			"landuse": landuse,
-			"boundary": boundary
-		};
+        //// layers from Geoserver (format WMS)
+        // var points = L.tileLayer.wms("http://localhost:8080/geoserver/first/wms", {
+        //     layers: 'fitst:points_cn',
+        //     format: 'image/png',
+        //     transparent: true,
+        //     version: '1.1.0',
+        //     // attribution: "LfK, TUM"
+        // });
+        // var railways = L.tileLayer.wms("http://localhost:8080/geoserver/first/wms", {
+        //     layers: 'fitst:railways_cn',
+        //     format: 'image/png',
+        //     transparent: true,
+        //     version: '1.1.0',
+        //     // attribution: "LfK, TUM"
+        // });
+        // var buildings = L.tileLayer.wms("http://localhost:8080/geoserver/first/wms", {
+        //     layers: 'fitst:buildings_cn',
+        //     format: 'image/png',
+        //     transparent: true,
+        //     version: '1.1.0',
+        //     // attribution: "LfK, TUM"
+        // });
+        // var landuse = L.tileLayer.wms("http://localhost:8080/geoserver/first/wms", {
+        //     layers: 'fitst:landuse_cn',
+        //     format: 'image/png',
+        //     transparent: true,
+        //     version: '1.1.0',
+        //     attribution: "LfK, TUM"
+        // });
+        // var boundary = L.tileLayer.wms("http://localhost:8080/geoserver/first/wms", {
+        //     layers: 'fitst:boundary_cn',
+        //     format: 'image/png',
+        //     transparent: true,
+        //     version: '1.1.0',
+        //     // attribution: "LfK, TUM"
+        // });
+        //
+        // var population_2000 = L.tileLayer.wms('http://sedac.ciesin.columbia.edu/geoserver/wms', {
+        //     layers: 'gpw-v3:gpw-v3-population-density_2000',
+        //     format: 'image/png',
+        //     transparent: true,
+        //     version: '1.1.0'
+        // });
+        //
+        //
+        // // Groupe layers
+        // var overlays = {
+        //     "population_2000": population_2000,
+        //     "points": points,
+        //     "railways": railways,
+        //     "buildings": buildings,
+        //     "landuse": landuse,
+        //     "boundary": boundary
+        // };
 
 
         //----------------------------------------------------------------------------------
-        // display geojson layer
+        // define geojson layer style
         //----------------------------------------------------------------------------------
         var transportationStyle = {
             "color": "#2340b9",
@@ -237,31 +237,10 @@
         //     }
         // }).addTo(map);
 
-        //----------------------------------------------------------------------------------
-        // time slider geojson filter
-        //----------------------------------------------------------------------------------
-
-		function geojsonTimeFilter(geojson, startTime, endTime) {
-		    var tGeojson = geojson;
-		    var layers = geojson._layers;
-
-			for (var l in layers){
-			    var year = parseInt(layers[l].feature.properties.year);
-			    if (year < startTime){
-			        // if layer year lower than startTime, remove the layer from geojson
-			        delete tGeojson._layers[l];
-				} else if (year > endTime){
-                    delete tGeojson._layers[l];
-				}
-			}
-			return tGeojson;
-        }
-
-
         //add geojson polygon to the map
         var transportation = new L.geoJSON(transportation, {
             style: transportationStyle,
-			// onEachFeature: layersOnEachFeature
+            // onEachFeature: layersOnEachFeature
         });
 
         //add geojson polygon to the map
@@ -287,16 +266,16 @@
             style: pollutionStyle
         });
 
-		var overlays_geojson = {
-		    "Transportation": transportation,
-			"Nature resources": nature,
-			"Tourism resources": tourism,
-			"Education": edu,
-			"Energy": energy,
-			"Pollution": pollution
-		};
+        var overlays_geojson = {
+            "Transportation": transportation,
+            "Nature resources": nature,
+            "Tourism resources": tourism,
+            "Education": edu,
+            "Energy": energy,
+            "Pollution": pollution
+        };
 
-		// add layer control to the map, overlays invisible by default
+        // add layer control to the map, overlays invisible by default
         L.control.layers(baseLayers,overlays_geojson).addTo(map);
 
 
@@ -318,29 +297,29 @@
 
         info.addTo(map);
 
-		// list of on display overlays
+        // list of on display overlays
         var layerDisplay = [];
 
 
-		map.on("overlayadd overlayremove", function (event) {
-			var layer = event.layer;
-			// console.log(layer);
+        map.on("overlayadd overlayremove", function (event) {
+            var layer = event.layer;
+            // console.log(layer);
 
             // get the information from all overlays
             var allLayers = Object.values(overlays_geojson);
 
-			if (event.type == "overlayadd"){
+            if (event.type == "overlayadd"){
 
-				// when a layer is added, push the layer information into the list
-				for (var l in allLayers){
-				    if (layer === allLayers[l]){
+                // when a layer is added, push the layer information into the list
+                for (var l in allLayers){
+                    if (layer === allLayers[l]){
                         layerDisplay.push(layer);
                         // console.log('onAdd: ');
                         // console.log(layerDisplay);
-					};
-				};
+                    };
+                };
 
-			} else if(event.type == "overlayremove"){
+            } else if(event.type == "overlayremove"){
 
                 // when a layer is removed, pop the layer information out of the list
                 for (var l in layerDisplay){
@@ -352,72 +331,105 @@
                 };
                 // console.log('onRemove: ');
                 // console.log(layerDisplay);
-			};
+            };
 
-			// if no overlays, display default info
-			if (layerDisplay.length == 0){
-			    info.update();
-			    return
-			}
+            // if no overlays, display default info
+            if (layerDisplay.length == 0){
+                info.update();
+                return
+            }
 
             // overlay info box
             var data_info = '';
 
             // Tget the information from layerDisplay and send it to update
             for(var l in layerDisplay){
-			    // console.log('l: '+ l)
-				var tmplayer = layerDisplay[l]._layers;
-				for(var i in tmplayer){
-				    // console.log('i:' + i)
+                // console.log('l: '+ l)
+                var tmplayer = layerDisplay[l]._layers;
+                for(var i in tmplayer){
+                    // console.log('i:' + i)
                     var properties = tmplayer[i].feature.properties;
                     data_info += properties.title + '  ' + properties.year + '<br\>';
                     // console.log(data_info)
-				}
-				data_info += '<br\>'
+                }
+                data_info += '<br\>'
             }
 
-			info.update(data_info);
-			// console.log('onDisplay: ');
-			// console.log(layerDisplay);
-		});
+            info.update(data_info);
+            // console.log('onDisplay: ');
+            // console.log(layerDisplay);
+        });
 
+        //----------------------------------------------------------------------------------
+        // time slider geojson filter
+        //----------------------------------------------------------------------------------
 
-	</script>
+        function geojsonTimeFilter(geojson, startTime, endTime) {
+            var tGeojson = geojson;
+            var layers = geojson._layers;
 
-	<!--<script src="http://code.jquery.com/jquery-1.11.0.js"></script>-->
-	<!--<script src="//cdnjs.cloudflare.com/ajax/libs/vis/3.12.0/vis.min.js"></script>-->
-	<script src="dist/vis.js"></script>
-	<!--<script src="dist/LeafletPlayback.js"></script>-->
-	<!--<script src="dist/timeslide.js"></script>-->
-	<script>
+            for (var l in layers){
+                var year = parseInt(layers[l].feature.properties.year);
+                if (year < startTime){
+                    // if layer year lower than startTime, remove the layer from geojson
+                    delete tGeojson._layers[l];
+                } else if (year > endTime){
+                    delete tGeojson._layers[l];
+                };
+            };
+            return tGeojson;
+        };
+
 
         var items = new vis.DataSet([
-            {id: 1, content: 'item 1', start: '1975'},
-            {id: 2, content: 'item 2', start: '2018'}
-            // {id: 3, content: 'item 3', start: '2013-04-18'},
-            // {id: 4, content: 'item 4', start: '2013-04-16', end: '2013-04-19'},
-            // {id: 5, content: 'item 5', start: '2013-04-25'},
-            // {id: 6, content: 'item 6', start: '2013-04-27'}
+            {id: 1, content: 'Start time', start: new Date('Dec 31 1974 00:00:00')},
+            {id: 2, content: 'End time', start: new Date('Dec 31 2017 00:00:00')},
+            // {id: 4, content: '5 years', start: '2010', end: '2015'},
         ]);
 
         var container = document.getElementById('timeline');
 
-        var groups = [
-            {
-                id: 1,
-                content: 'Group 1'
-                // Optional: a field 'className', 'style', 'order', [properties]
-            }
-            // more groups...
-        ];
-
         var slideOptions = {
+            editable: true,  // users can move time lables
             width: '100%',
             height: '100px'
         };
 
         var timeline = new vis.Timeline(container, items, slideOptions);
+
+        // default staring time and end time
+        var time1 = 1975;
+        var time2 = 2018;
+
+        items.on('update', function (event, properties) {
+
+            // get new staring time and end time
+            time1 = items._data[1].start.getFullYear() +1;
+            time2 = items._data[2].start.getFullYear() +1;
+            // console.log('star: '+ time1);
+            // console.log('end: '+ time2);
+
+            // update geojson
+            transportation = geojsonTimeFilter(transportation,time1, time2);
+            nature = geojsonTimeFilter(nature,time1, time2);
+            tourism = geojsonTimeFilter(tourism,time1, time2);
+            edu = geojsonTimeFilter(edu,time1, time2);
+            energy = geojsonTimeFilter(energy,time1, time2);
+            pollution = geojsonTimeFilter(pollution,time1, time2);
+
+
+        });
+	
+
+
+
+
 	</script>
+
+
+	<!--<script src="dist/LeafletPlayback.js"></script>-->
+	<!--<script src="dist/timeslide.js"></script>-->
+
 </body>
 
 

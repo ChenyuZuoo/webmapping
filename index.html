@@ -122,65 +122,6 @@
         // Zoom control
         // L.control.zoom().addTo(map);
 
-        //----------------------------------------------------------------------------------
-        // layers from WMS
-        //----------------------------------------------------------------------------------
-
-        //// layers from Geoserver (format WMS)
-        // var points = L.tileLayer.wms("http://localhost:8080/geoserver/first/wms", {
-        //     layers: 'fitst:points_cn',
-        //     format: 'image/png',
-        //     transparent: true,
-        //     version: '1.1.0',
-        //     // attribution: "LfK, TUM"
-        // });
-        // var railways = L.tileLayer.wms("http://localhost:8080/geoserver/first/wms", {
-        //     layers: 'fitst:railways_cn',
-        //     format: 'image/png',
-        //     transparent: true,
-        //     version: '1.1.0',
-        //     // attribution: "LfK, TUM"
-        // });
-        // var buildings = L.tileLayer.wms("http://localhost:8080/geoserver/first/wms", {
-        //     layers: 'fitst:buildings_cn',
-        //     format: 'image/png',
-        //     transparent: true,
-        //     version: '1.1.0',
-        //     // attribution: "LfK, TUM"
-        // });
-        // var landuse = L.tileLayer.wms("http://localhost:8080/geoserver/first/wms", {
-        //     layers: 'fitst:landuse_cn',
-        //     format: 'image/png',
-        //     transparent: true,
-        //     version: '1.1.0',
-        //     attribution: "LfK, TUM"
-        // });
-        // var boundary = L.tileLayer.wms("http://localhost:8080/geoserver/first/wms", {
-        //     layers: 'fitst:boundary_cn',
-        //     format: 'image/png',
-        //     transparent: true,
-        //     version: '1.1.0',
-        //     // attribution: "LfK, TUM"
-        // });
-        //
-        // var population_2000 = L.tileLayer.wms('http://sedac.ciesin.columbia.edu/geoserver/wms', {
-        //     layers: 'gpw-v3:gpw-v3-population-density_2000',
-        //     format: 'image/png',
-        //     transparent: true,
-        //     version: '1.1.0'
-        // });
-        //
-        //
-        // // Groupe layers
-        // var overlays = {
-        //     "population_2000": population_2000,
-        //     "points": points,
-        //     "railways": railways,
-        //     "buildings": buildings,
-        //     "landuse": landuse,
-        //     "boundary": boundary
-        // };
-
 
         //----------------------------------------------------------------------------------
         // define geojson layer style
@@ -221,21 +162,7 @@
             "opacity": 0.5
         };
 
-        var geojsonMarkerOptions = {
-            radius: 8,
-            fillColor: "#ff2123",
-            color: "#000",
-            weight: 1,
-            opacity: 1,
-            fillOpacity: 0.8
-        };
 
-        // add geojson points to the map
-        // L.geoJSON(geojsonFeature, {
-        //     pointToLayer: function (feature, latlng) {
-        //         return L.circleMarker(latlng, geojsonMarkerOptions);
-        //     }
-        // }).addTo(map);
 
         //add geojson polygon to the map
         var transportation = new L.geoJSON(transportation, {
@@ -416,8 +343,6 @@
             edu = geojsonTimeFilter(edu,time1, time2);
             energy = geojsonTimeFilter(energy,time1, time2);
             pollution = geojsonTimeFilter(pollution,time1, time2);
-
-
         });
 	
 
@@ -425,10 +350,6 @@
 
 
 	</script>
-
-
-	<!--<script src="dist/LeafletPlayback.js"></script>-->
-	<!--<script src="dist/timeslide.js"></script>-->
 
 </body>
 

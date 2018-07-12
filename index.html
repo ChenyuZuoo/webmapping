@@ -51,6 +51,7 @@
 	<script src="libs/slide_menu/SlideMenu.js"></script>
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
+	<link rel="stylesheet"  href="dist/meta.css">
 	
     <style>
         body {
@@ -216,7 +217,7 @@
 			});
 		}
 
-		
+
         //add geojson polygon to the map
         var transportationLayer = new L.geoJSON(gTransportation, {
             style: transportationStyle,
@@ -323,12 +324,23 @@
             // console.log('end: '+ time2);
 
             // update geojson
-            transportation = geojsonTimeFilter(transportation,time1, time2);
-            nature = geojsonTimeFilter(nature,time1, time2);
-            tourism = geojsonTimeFilter(tourism,time1, time2);
-            edu = geojsonTimeFilter(edu,time1, time2);
-            energy = geojsonTimeFilter(energy,time1, time2);
-            pollution = geojsonTimeFilter(pollution,time1, time2);
+            // transportation = geojsonTimeFilter(transportation,time1, time2);
+            // nature = geojsonTimeFilter(nature,time1, time2);
+            // tourism = geojsonTimeFilter(tourism,time1, time2);
+            // edu = geojsonTimeFilter(edu,time1, time2);
+            // energy = geojsonTimeFilter(energy,time1, time2);
+            // pollution = geojsonTimeFilter(pollution,time1, time2);
+
+            var gTransportation = geojsonTimeFilter(transportation, time1, time2);
+            var gNature_resources = geojsonTimeFilter(nature_resources, time1, time2);
+            var gTourism_resources = geojsonTimeFilter(tourism_resources, time1, time2);
+            var gEducation = geojsonTimeFilter(education, time1, time2);
+            var gEnergy = geojsonTimeFilter(energy, time1, time2);
+            var gPollution = geojsonTimeFilter(pollution, time1, time2);
+
+            transportationLayer._layer = gTransportation;
+
+
         });
 	
 

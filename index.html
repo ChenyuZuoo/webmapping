@@ -58,7 +58,7 @@
             margin: 0;
         }
         html, body, #map {
-            height: 94%;
+            height: 96%;
             width: 100%;
         }
     </style>
@@ -70,7 +70,7 @@
 	<script src="metadata-geojson.js" type="text/javascript"></script>
 	<script src="dist/vis.js"></script>
 	<script>
-        ///// Fond de base
+        // the base layers
         var OpenStreetMap = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
         });
@@ -84,7 +84,7 @@
         });
 
 
-        ///// Configuration the base map
+        // Configuration the base map
         var map = L.map('map', {
             layers: [Mapbox_light], /// fond de base
             center: [31.2, 121.4],/// coordonnées
@@ -94,7 +94,7 @@
         });
 
 
-        /////layers de base
+        // base layer obj
         var baseLayers = {
             "Open Street Map": OpenStreetMap,
             "World Imagery": WorldImagery,
@@ -124,7 +124,7 @@
 
 
         //----------------------------------------------------------------------------------
-        // define geojson layer style
+        // define geojson layer (overlay) style
         //----------------------------------------------------------------------------------
         var transportationStyle = {
             "color": "#2340b9",
@@ -162,44 +162,53 @@
             "opacity": 0.5
         };
 
+        // define global variables to save selected geojson
+		// initialization global geojson variables
+		var gTransportation = transportation;
+		var gNature_resources = nature_resources;
+		var gTourism_resources = tourism_resources;
+		var gEducation = education;
+		var gEnergy = energy;
+		var gPollution = pollution;
+
 
 
         //add geojson polygon to the map
-        var transportation = new L.geoJSON(transportation, {
+        var transportationLayer = new L.geoJSON(gTransportation, {
             style: transportationStyle,
             // onEachFeature: layersOnEachFeature
         });
 
         //add geojson polygon to the map
-        var nature = new L.geoJSON(nature_resources, {
+        var natureLayer = new L.geoJSON(gNature_resources, {
             style: nature_resourceStyle
         });
 
         //add geojson polygon to the map
-        var tourism = new L.geoJSON(tourism_resources, {
+        var tourismLayer = new L.geoJSON(gTourism_resources, {
             style: tourism_resourceStyle
         });
 
         //add geojson polygon to the map
-        var edu = new L.geoJSON(education, {
+        var eduLayer = new L.geoJSON(gEducation, {
             style: educationStyle
         });
 
-        var energy = new L.geoJSON(energy, {
+        var energyLayer = new L.geoJSON(gEnergy, {
             style: energyStyle
         });
 
-        var pollution = new L.geoJSON(pollution, {
+        var pollutionLayer = new L.geoJSON(gPollution, {
             style: pollutionStyle
         });
 
         var overlays_geojson = {
-            "Transportation": transportation,
-            "Nature resources": nature,
-            "Tourism resources": tourism,
-            "Education": edu,
-            "Energy": energy,
-            "Pollution": pollution
+            "Transportation": transportationLayer,
+            "Nature resources": natureLayer,
+            "Tourism resources": tourismLayer,
+            "Education": eduLayer,
+            "Energy": energyLayer,
+            "Pollution": pollutionLayer
         };
 
         // add layer control to the map, overlays invisible by default
@@ -227,7 +236,6 @@
         // list of on display overlays
         var layerDisplay = [];
 
-
         map.on("overlayadd overlayremove", function (event) {
             var layer = event.layer;
             // console.log(layer);
@@ -241,8 +249,6 @@
                 for (var l in allLayers){
                     if (layer === allLayers[l]){
                         layerDisplay.push(layer);
-                        // console.log('onAdd: ');
-                        // console.log(layerDisplay);
                     };
                 };
 
@@ -256,8 +262,6 @@
                         // console.log(layerDisplay.length);
                     };
                 };
-                // console.log('onRemove: ');
-                // console.log(layerDisplay);
             };
 
             // if no overlays, display default info
@@ -274,17 +278,13 @@
                 // console.log('l: '+ l)
                 var tmplayer = layerDisplay[l]._layers;
                 for(var i in tmplayer){
-                    // console.log('i:' + i)
                     var properties = tmplayer[i].feature.properties;
                     data_info += properties.title + '  ' + properties.year + '<br\>';
-                    // console.log(data_info)
                 }
                 data_info += '<br\>'
             }
 
             info.update(data_info);
-            // console.log('onDisplay: ');
-            // console.log(layerDisplay);
         });
 
         //----------------------------------------------------------------------------------
@@ -292,7 +292,7 @@
         //----------------------------------------------------------------------------------
 
         function geojsonTimeFilter(geojson, startTime, endTime) {
-            var tGeojson = geojson;
+            var tGeojson = geojson;  // tGeojson is temporary variable
             var layers = geojson._layers;
 
             for (var l in layers){
@@ -319,7 +319,7 @@
         var slideOptions = {
             editable: true,  // users can move time lables
             width: '100%',
-            height: '100px'
+            height: '110px'
         };
 
         var timeline = new vis.Timeline(container, items, slideOptions);

@@ -122,6 +122,24 @@
         // Zoom control
         // L.control.zoom().addTo(map);
 
+        var info = L.control();
+
+        info.onAdd = function (map) {
+            this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
+            this.update();
+            return this._div;
+        };
+
+        // method that we will use to update the control based on feature properties passed
+        info.update = function (props) {
+            this._div.innerHTML = '<h4>Dataset Information</h4>' +  (props ? props : 'Choose a category');
+        };
+
+        info.addTo(map);
+
+        // list of overlays on display
+        var gDisplayLayersInfo = [];
+
 
         //----------------------------------------------------------------------------------
         // define geojson layer (overlay) style
@@ -171,38 +189,69 @@
 		var gEnergy = energy;
 		var gPollution = pollution;
 
+		// get title and year from a layer in a geojson variable
+		function getLayerInfo(layer) {
+		    // a list to save layer properties
+			var info = [];
+			var properties = layer.feature.properties;;
+			info += properties.title + '  ' + properties.year;
+			return info;
+        }
 
+		function overlayOnEachFeature(feature, layer){
+		    layer.on({
+				add: function (e) {
+				    var layerInfo = getLayerInfo(layer);
+					gDisplayLayersInfo.push('<br>' + layerInfo);
+                },
+                remove: function (e) {
+                    var layerInfo = getLayerInfo(layer);
+                    var listElement = '<br>' + layerInfo;
+					for (var l in gDisplayLayersInfo){
+						if (listElement === gDisplayLayersInfo[l]){
+							gDisplayLayersInfo.splice(l,1);
+						};
+					};
+                }
+			});
+		}
 
+		
         //add geojson polygon to the map
         var transportationLayer = new L.geoJSON(gTransportation, {
             style: transportationStyle,
-            // onEachFeature: layersOnEachFeature
+            onEachFeature: overlayOnEachFeature
         });
 
         //add geojson polygon to the map
         var natureLayer = new L.geoJSON(gNature_resources, {
-            style: nature_resourceStyle
+            style: nature_resourceStyle,
+            onEachFeature: overlayOnEachFeature
         });
 
         //add geojson polygon to the map
         var tourismLayer = new L.geoJSON(gTourism_resources, {
-            style: tourism_resourceStyle
+            style: tourism_resourceStyle,
+            onEachFeature: overlayOnEachFeature
         });
 
         //add geojson polygon to the map
         var eduLayer = new L.geoJSON(gEducation, {
-            style: educationStyle
+            style: educationStyle,
+            onEachFeature: overlayOnEachFeature
         });
 
         var energyLayer = new L.geoJSON(gEnergy, {
-            style: energyStyle
+            style: energyStyle,
+            onEachFeature: overlayOnEachFeature
         });
 
         var pollutionLayer = new L.geoJSON(gPollution, {
-            style: pollutionStyle
+            style: pollutionStyle,
+            onEachFeature: overlayOnEachFeature
         });
 
-        var overlays_geojson = {
+        var overlays_geojson_ori = {
             "Transportation": transportationLayer,
             "Nature resources": natureLayer,
             "Tourism resources": tourismLayer,
@@ -212,79 +261,16 @@
         };
 
         // add layer control to the map, overlays invisible by default
-        L.control.layers(baseLayers,overlays_geojson).addTo(map);
+        L.control.layers(baseLayers,overlays_geojson_ori).addTo(map);
 
-
-        //----------------------------------------------------------------------------------
-        // info box
-        //----------------------------------------------------------------------------------
-        var info = L.control();
-
-        info.onAdd = function (map) {
-            this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
-            this.update();
-            return this._div;
-        };
-
-        // method that we will use to update the control based on feature properties pacssed
-        info.update = function (props) {
-            this._div.innerHTML = '<h4>Dataset Information</h4>' +  (props ? props : 'Choose a category');
-        };
-
-        info.addTo(map);
-
-        // list of on display overlays
-        var layerDisplay = [];
-
+		// update info box
         map.on("overlayadd overlayremove", function (event) {
-            var layer = event.layer;
-            // console.log(layer);
 
-            // get the information from all overlays
-            var allLayers = Object.values(overlays_geojson);
-
-            if (event.type == "overlayadd"){
-
-                // when a layer is added, push the layer information into the list
-                for (var l in allLayers){
-                    if (layer === allLayers[l]){
-                        layerDisplay.push(layer);
-                    };
-                };
-
-            } else if(event.type == "overlayremove"){
-
-                // when a layer is removed, pop the layer information out of the list
-                for (var l in layerDisplay){
-                    if (layer === layerDisplay[l]){
-                        layerDisplay.splice(l,1);
-                        // console.log('remove');
-                        // console.log(layerDisplay.length);
-                    };
-                };
-            };
-
-            // if no overlays, display default info
-            if (layerDisplay.length == 0){
+            if (gDisplayLayersInfo.length == 0){
                 info.update();
                 return
-            }
-
-            // overlay info box
-            var data_info = '';
-
-            // Tget the information from layerDisplay and send it to update
-            for(var l in layerDisplay){
-                // console.log('l: '+ l)
-                var tmplayer = layerDisplay[l]._layers;
-                for(var i in tmplayer){
-                    var properties = tmplayer[i].feature.properties;
-                    data_info += properties.title + '  ' + properties.year + '<br\>';
-                }
-                data_info += '<br\>'
-            }
-
-            info.update(data_info);
+			}
+            info.update(gDisplayLayersInfo);
         });
 
         //----------------------------------------------------------------------------------

@@ -1,0 +1,39 @@
+﻿Chart,Purpose,Element,Interactions,value
+Dashboard,Analyzing,Toolbar,Filtering,0.25
+Dashboard,Analyzing,Overview map,Highlighting,0.25
+Dashboard,Analyzing,Table,Categorizing,0.25
+Dashboard,Analyzing,Grid map,Zooming and panning,0.0833
+Dashboard,Analyzing,Grid map,Clicking,0.0833
+Dashboard,Analyzing,Grid map,Toolip,0.0833
+Dashboard,Analyzing,Table,Highlighting,0.1
+Dashboard,Analyzing,Table,Ranking,0.1
+Dashboard,Analyzing,Heat map,Toolip,0.05
+Dashboard,Analyzing,Heat map,Clicking,0.05
+Dashboard,Analyzing,Heat map,Linked,0.05
+Dashboard,Analyzing,Heat map,Zooming and Panning,0.05
+Dashboard,Analyzing,Overview map,Highlighting,0.2
+Dashboard,Analyzing,Histogram,Filtering,0.2
+Dashboard,Analyzing,Toolbar,Filtering,0.1
+Dashboard,Analyzing,Toolbar,Swiching Mode,0.1
+Dashboard,Data management,Parallel coordinates,Filtering,0.25
+Dashboard,Data management,Bar chart,Categorizing,0.25
+Dashboard,Data management,Heat map,Filtering,0.125
+Dashboard,Data management,Heat map,Zooming and Panning,0.125
+Dashboard,Data management,Table,No,0.25
+Dashboard,Decision Making,Table,No,0.2
+Dashboard,Decision Making,Histogram,No,0.2
+Dashboard,Decision Making,Image,No,0.2
+Dashboard,Decision Making,Map,Zooming and Panning,0.2
+Dashboard,Decision Making,Text,No,0.2
+Dashboard,Analyzing,Toolbar,Filtering,0.2
+Dashboard,Analyzing,Map,Zooming and Panning,0.2
+Dashboard,Analyzing,Calender View,Filtering,0.1
+Dashboard,Analyzing,Calender View,Highlighting,0.1
+Dashboard,Analyzing,Clock View,No,0.2
+Dashboard,Analyzing,Glyph,No,0.2
+Dashboard,Analyzing,Toolbar,Filtering,0.1
+Dashboard,Analyzing,Toolbar,Configuring,0.1
+Dashboard,Analyzing,Box Plot,Filtering,0.2
+Dashboard,Analyzing,Parallel Sets,No,0.2
+Dashboard,Analyzing,Table,Filtering,0.2
+Dashboard,Analyzing,Choropleth Map,Zooming and Panning,0.2

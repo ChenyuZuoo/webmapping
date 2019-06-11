@@ -1,11 +1,17 @@
-﻿Chart,Purpose,Element,Interaction,value
-Dashboard,Analysis,Table,Highlighting,1
-Dashboard,Analysis,Table,Ranking,1
-Dashboard,Analysis,Heat map,Toolip,1
-Dashboard,Analysis,Heat map,Clicking,1
-Dashboard,Analysis,Heat map,Linked,1
-Dashboard,Analysis,Heat map,Zooming and panning,1
-Dashboard,Analysis,Overview map,Highlighting,1
-Dashboard,Analysis,Histogram,Filtering,1
-Dashboard,Analysis,Toolbar,Filtering,1
-Dashboard,Analysis,Toolbar,Swiching mode,1
+﻿Chart,Purpose,Element,Interaction
+Dashboard,Analyzing,Toolbar,Filtering
+Dashboard,Analyzing,Overview map,Highlighting
+Dashboard,Analyzing,Table,Categorizing
+Dashboard,Analyzing,Grid map,Presenting
+Dashboard,Analyzing,Grid map,Clicking
+Dashboard,Analyzing,Grid map,Toolip
+Dashboard,Analyzing,Table,Highlighting
+Dashboard,Analyzing,Table,Ranking
+Dashboard,Analyzing,Heat map,Toolip
+Dashboard,Analyzing,Heat map,Clicking
+Dashboard,Analyzing,Heat map,Linked
+Dashboard,Analyzing,Heat map,Zooming and panning
+Dashboard,Analyzing,Overview map,Highlighting
+Dashboard,Analyzing,Histogram,Filtering
+Dashboard,Analyzing,Toolbar,Filtering
+Dashboard,Analyzing,Toolbar,Swiching mode

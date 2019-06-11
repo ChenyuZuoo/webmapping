@@ -1,25 +1,25 @@
 Chart,Purpose,Element,Interaction,value
-Perished,Male,Adult,Crew,1
-Perished,Male,Adult,Third Class,1
-Perished,Male,Adult,Second Class,1
-Perished,Male,Adult,First Class,1
-Perished,Male,Child,Third Class,1
-Perished,Female,Adult,Crew,1
-Perished,Female,Adult,Third Class,1
-Perished,Female,Adult,Second Class,1
-Perished,Female,Adult,First Class,1
-Perished,Female,Child,Third Class,1
-Survived,Male,Adult,Crew,1
-Survived,Male,Adult,Third Class,1
-Survived,Male,Adult,Second Class,1
-Survived,Male,Adult,First Class,1
-Survived,Male,Child,Third Class,1
-Survived,Male,Child,Second Class,1
-Survived,Male,Child,First Class,1
-Survived,Female,Adult,Crew,1
-Survived,Female,Adult,Third Class,1
-Survived,Female,Adult,Second Class,1
-Survived,Female,Adult,First Class,1
-Survived,Female,Child,Third Class,1
-Survived,Female,Child,Second Class,1
-Survived,Female,Child,First Class,1
+Dashboard,Analysis,Adult,Crew,1
+Dashboard,Analysis,Adult,Third Class,1
+Dashboard,Analysis,Adult,Second Class,1
+Dashboard,Analysis,Adult,First Class,1
+Dashboard,Monitoring,Child,Third Class,1
+Dashboard,Monitoring,Adult,Crew,1
+Dashboard,Monitoring,Adult,Third Class,1
+Dashboard,Monitoring,Adult,Second Class,1
+Dashboard,Monitoring,Adult,First Class,1
+Dashboard,Monitoring,Child,Third Class,1
+Storytelling Map,Male,Adult,Crew,1
+Storytelling Map,Male,Adult,Third Class,1
+Storytelling Map,Male,Adult,Second Class,1
+Storytelling Map,Male,Adult,First Class,1
+Storytelling Map,Male,Child,Third Class,1
+Storytelling Map,Male,Child,Second Class,1
+Storytelling Map,Male,Child,First Class,1
+Storytelling Map,Female,Adult,Crew,1
+Storytelling Map,Female,Adult,Third Class,1
+Storytelling Map,Female,Adult,Second Class,1
+Storytelling Map,Female,Adult,First Class,1
+Storytelling Map,Female,Child,Third Class,1
+Storytelling Map,Female,Child,Second Class,1
+Storytelling Map,Female,Child,First Class,1

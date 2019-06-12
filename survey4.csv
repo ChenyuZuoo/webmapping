@@ -1,0 +1,171 @@
+﻿Chart,Purpose,Element,Interactions,value
+Dashboard,Analyzing,Toolbar,Filtering,0.25
+Dashboard,Analyzing,Overview Map,Highlighting,0.25
+Dashboard,Analyzing,Table,Categorizing,0.25
+Dashboard,Analyzing,Grid Map,Zooming and Panning,0.0833
+Dashboard,Analyzing,Grid Map,Clicking,0.0833
+Dashboard,Analyzing,Grid Map,Toolip,0.0833
+Dashboard,Analyzing,Table,Highlighting,0.1
+Dashboard,Analyzing,Table,Ranking and Ordering,0.1
+Dashboard,Analyzing,Heat Map,Toolip,0.05
+Dashboard,Analyzing,Heat Map,Clicking,0.05
+Dashboard,Analyzing,Heat Map,Linked,0.05
+Dashboard,Analyzing,Heat Map,Zooming and Panning,0.05
+Dashboard,Analyzing,Overview Map,Highlighting,0.2
+Dashboard,Analyzing,Histogram,Filtering,0.2
+Dashboard,Analyzing,Toolbar,Filtering,0.1
+Dashboard,Analyzing,Toolbar,Swiching Mode,0.1
+Dashboard,Data management,Parallel Coordinates,Filtering,0.25
+Dashboard,Data management,Bar Chart,Categorizing,0.25
+Dashboard,Data management,Heat Map,Filtering,0.125
+Dashboard,Data management,Heat Map,Zooming and Panning,0.125
+Dashboard,Data management,Table,No,0.25
+Dashboard,Decision Making,Table,No,0.2
+Dashboard,Decision Making,Histogram,No,0.2
+Dashboard,Decision Making,Image,No,0.2
+Dashboard,Decision Making,Map,Zooming and Panning,0.2
+Dashboard,Decision Making,Text,No,0.2
+Dashboard,Analyzing,Toolbar,Filtering,0.2
+Dashboard,Analyzing,Map,Zooming and Panning,0.2
+Dashboard,Analyzing,Calender View,Filtering,0.1
+Dashboard,Analyzing,Calender View,Highlighting,0.1
+Dashboard,Analyzing,Clock View,No,0.2
+Dashboard,Analyzing,Glyph,No,0.2
+Dashboard,Analyzing,Toolbar,Filtering,0.1
+Dashboard,Analyzing,Toolbar,Configuring,0.1
+Dashboard,Analyzing,Box Plot,Filtering,0.2
+Dashboard,Analyzing,Parallel Sets,No,0.2
+Dashboard,Analyzing,Table,Filtering,0.2
+Dashboard,Analyzing,Heat Map,Zooming and Panning,0.2
+Dashboard,Analyzing,Choropleth Map,Zooming and Panning,0.111
+Dashboard,Analyzing,Choropleth Map,Filtering,0.111
+Dashboard,Analyzing,Choropleth Map,Clicking,0.111
+Dashboard,Analyzing,Histogram,Filtering,0.333
+Dashboard,Analyzing,Bar Chart,Filtering,0.334
+Dashboard,Decision Making,Point Map,Clicking,0.25
+Dashboard,Decision Making,Point Map,Toolip,0.25
+Dashboard,Decision Making,Toolbar,Filtering,0.5
+Dashboard,Data management,Toolbar,Selecting,0.05
+Dashboard,Data management,Toolbar,Filtering,0.05
+Dashboard,Data management,Toolbar,Importing and Exporting,0.05
+Dashboard,Data management,Toolbar,Querying,0.05
+Dashboard,Data management,Histogram,No,0.2
+Dashboard,Data management,Point Map,Querying,0.2
+Dashboard,Data management,Heat Map,No,0.2
+Dashboard,Data management,Choropleth Map,Selecting,0.2
+Dashboard,Monitoring,Point Map,No,0.166
+Dashboard,Monitoring,Bar Chart,No,0.166
+Dashboard,Monitoring,Pie Chart,No,0.166
+Dashboard,Monitoring,Table,No,0.166
+Dashboard,Monitoring,Text,No,0.166
+Dashboard,Monitoring,Menu Page,Selecting,0.167
+Dashboard,Analyzing,Matrix,No,0.25
+Dashboard,Analyzing,Choropleth Map,No,0.25
+Dashboard,Analyzing,Parallel Coordinates,Filtering,0.25
+Dashboard,Analyzing,Self-organizing Map,Ranking and Ordering,0.25
+Dashboard,Analyzing,Calender View,Toolip,0.166
+Dashboard,Analyzing,Histogram,Filtering,0.166
+Dashboard,Analyzing,Glyph,Toolip,0.083
+Dashboard,Analyzing,Glyph,Clicking,0.083
+Dashboard,Analyzing,Cartogram,Zooming and Panning,0.083
+Dashboard,Analyzing,Cartogram,Clicking,0.083
+Dashboard,Analyzing,Word Cloud,Toolip,0.083
+Dashboard,Analyzing,Word Cloud,Highlighting,0.083
+Dashboard,Analyzing,Table,Ranking and Ordering,0.167
+Dashboard,Analyzing,Point Map,No,0.167
+Dashboard,Analyzing,Scatter Plot,No,0.167
+Dashboard,Analyzing,Tree Map,Filtering,0.083
+Dashboard,Analyzing,Tree Map,Calculating,0.083
+Dashboard,Analyzing,Histogram,No,0.166
+Dashboard,Analyzing,Clock View,No,0.166
+Dashboard,Analyzing,Toolbar,Importing and Exporting,0.083
+Dashboard,Analyzing,Toolbar,Filtering,0.083
+Dashboard,Analyzing,Bar Chart,Categorizing,0.166
+Dashboard,Analyzing,Bar Chart,Filtering,0.166
+Dashboard,Analyzing,Line Chart,Filtering,0.333
+Dashboard,Analyzing,Grid Map,Zooming and Panning,0.166
+Dashboard,Analyzing,Grid Map,Filtering,0.166
+Dashboard,Analyzing,Tree Map,Filtering,0.083
+Dashboard,Analyzing,Tree Map,Categorizing,0.084
+Dashboard,Analyzing,Cartogram,Zooming and Panning,0.166
+Dashboard,Analyzing,Bar Chart,No,0.166
+Dashboard,Analyzing,Line Chart,No,0.166
+Dashboard,Analyzing,Choropleth Map,Zooming and Panning,0.166
+Dashboard,Analyzing,Glyph,No,0.166
+Dashboard,Analyzing,Choropleth Map,Zooming and Panning,0.1
+Dashboard,Analyzing,Cartogram,Zooming and Panning,0.1
+Dashboard,Analyzing,Tree Map,No,0.1
+Dashboard,Analyzing,Parallel Coordinates,No,0.1
+Dashboard,Analyzing,Radar Chart,No,0.1
+Dashboard,Analyzing,Scatter Plot,No,0.1
+Dashboard,Analyzing,Bar Chart,No,0.1
+Dashboard,Analyzing,Glyph,No,0.1
+Dashboard,Analyzing,Pie Chart,No,0.1
+Dashboard,Analyzing,Toolbar,Filtering,0.05
+Dashboard,Analyzing,Toolbar,Importing and Exporting,0.05
+Dashboard,Analyzing,Toolbar,Filtering,0.055
+Dashboard,Analyzing,Toolbar,Importing and Exporting,0.055
+Dashboard,Analyzing,Toolbar,Calculating,0.055
+Dashboard,Analyzing,Heat Map,Zooming and Panning,0.055
+Dashboard,Analyzing,Heat Map,Toolip,0.055
+Dashboard,Analyzing,Heat Map,Clicking,0.055
+Dashboard,Analyzing,Satellite Map,Zooming and Panning,0.166
+Dashboard,Analyzing,Calender View,Highlighting,0.166
+Dashboard,Analyzing,Clock View,No,0.166
+Dashboard,Analyzing,Glyph,No,0.166
+Dashboard,Learning,Toolbar,Filtering,0.2
+Dashboard,Learning,Histogram,No,0.2
+Dashboard,Learning,Point Map,Clicking,0.066
+Dashboard,Learning,Point Map,Zooming and Panning,0.066
+Dashboard,Learning,Point Map,Toolip,0.066
+Dashboard,Learning,Choropleth Map,Clicking,0.066
+Dashboard,Learning,Choropleth Map,Zooming and Panning,0.066
+Dashboard,Learning,Choropleth Map,Toolip,0.066
+Dashboard,Learning,Menu Page,Selecting,0.2
+Dashboard,Analyzing,Cartogram,Toolip,0.2
+Dashboard,Analyzing,Calender View,No,0.2
+Dashboard,Analyzing,Box Plot,No,0.2
+Dashboard,Analyzing,Table,No,0.2
+Dashboard,Analyzing,Toolbar,Highlighting,0.2
+Dashboard,Analyzing,Cartogram,Zooming and Panning,0.125
+Dashboard,Analyzing,Cartogram,Toolip,0.125
+Dashboard,Analyzing,Bar Chart,No,0.25
+Dashboard,Analyzing,Parallel Coordinates,No,0.25
+Dashboard,Analyzing,Line Chart,No,0.25
+Dashboard,Analyzing,Word Cloud,Selecting,0.083
+Dashboard,Analyzing,Word Cloud,Ranking and Ordering,0.083
+Dashboard,Analyzing,Sankey Diagram,Selecting,0.167
+Dashboard,Analyzing,Parallel Coordinates,Selecting,0.166
+Dashboard,Analyzing,Histogram,Filtering,0.166
+Dashboard,Analyzing,Table,Searching,0.166
+Dashboard,Analyzing,Toolbar,Filtering,0.166
+Dashboard,Analyzing,Heat Map,No,0.2
+Dashboard,Analyzing,Grid Map,No,0.2
+Dashboard,Analyzing,Histogram,Filtering,0.2
+Dashboard,Analyzing,Bar Chart,Filtering,0.2
+Dashboard,Analyzing,Table,No,0.2
+Dashboard,Analyzing,Toolbar,Filtering,0.0625
+Dashboard,Analyzing,Toolbar,Ranking and Ordering,0.0625
+Dashboard,Analyzing,Table,Outlining,0.125
+Dashboard,Analyzing,Time Slider,Filtering,0.125
+Dashboard,Analyzing,Image,No,0.125
+Dashboard,Analyzing,Table,No,0.125
+Dashboard,Analyzing,Word Cloud,Ranking and Ordering,0.125
+Dashboard,Analyzing,Point Map,Zooming and Panning,0.125
+Dashboard,Analyzing,Histogram,No,0.125
+Dashboard,Analyzing,Toolbar,Importing and Exporting,0.047
+Dashboard,Analyzing,Toolbar,Filtering,0.047
+Dashboard,Analyzing,Toolbar,Selecting,0.047
+Dashboard,Analyzing,Bar Chart,Selecting,0.047
+Dashboard,Analyzing,Bar Chart,Ranking and Ordering,0.047
+Dashboard,Analyzing,Bar Chart,Categorizing,0.047
+Dashboard,Analyzing,Line Chart,No,0.143
+Dashboard,Analyzing,Choropleth Map,Zooming and Panning,0.0478
+Dashboard,Analyzing,Choropleth Map,Filtering,0.0478
+Dashboard,Analyzing,Choropleth Map,Selecting,0.0478
+Dashboard,Analyzing,Scatter Plot,Filtering,0.142
+Dashboard,Analyzing,Table,Ranking and Ordering,0.0714
+Dashboard,Analyzing,Table,Highlighting,0.0714
+Dashboard,Analyzing,Glyph,No,0.142
+Storytelling Map,Learning,Map,No,5
+Storytelling Map,Monitoring,Text,No,5

@@ -7,7 +7,7 @@ Dashboard,Analyzing,Grid Map,Clicking,0.0833
 Dashboard,Analyzing,Grid Map,Tooltip,0.0833
 Dashboard,Analyzing,Table,Highlighting,0.1
 Dashboard,Analyzing,Table,Ranking and Ordering,0.1
-Dashboard,Analyzing,Heat Map,Toolip,0.05
+Dashboard,Analyzing,Heat Map,Tooltip,0.05
 Dashboard,Analyzing,Heat Map,Clicking,0.05
 Dashboard,Analyzing,Heat Map,Linked,0.05
 Dashboard,Analyzing,Heat Map,Zooming and Panning,0.05
@@ -43,7 +43,7 @@ Dashboard,Analyzing,Choropleth Map,Clicking,0.111
 Dashboard,Analyzing,Histogram,Filtering,0.333
 Dashboard,Analyzing,Bar Chart,Filtering,0.334
 Dashboard,Decision Making,Point Map,Clicking,0.25
-Dashboard,Decision Making,Point Map,Toolip,0.25
+Dashboard,Decision Making,Point Map,Tooltip,0.25
 Dashboard,Decision Making,Toolbar,Filtering,0.5
 Dashboard,Data management,Toolbar,Selecting,0.05
 Dashboard,Data management,Toolbar,Filtering,0.05
@@ -63,13 +63,13 @@ Dashboard,Analyzing,Matrix,No,0.25
 Dashboard,Analyzing,Choropleth Map,No,0.25
 Dashboard,Analyzing,Parallel Coordinates,Filtering,0.25
 Dashboard,Analyzing,Self-organizing Map,Ranking and Ordering,0.25
-Dashboard,Analyzing,Calender View,Toolip,0.166
+Dashboard,Analyzing,Calender View,Tooltip,0.166
 Dashboard,Analyzing,Histogram,Filtering,0.166
-Dashboard,Analyzing,Glyph,Toolip,0.083
+Dashboard,Analyzing,Glyph,Tooltip,0.083
 Dashboard,Analyzing,Glyph,Clicking,0.083
 Dashboard,Analyzing,Cartogram,Zooming and Panning,0.083
 Dashboard,Analyzing,Cartogram,Clicking,0.083
-Dashboard,Analyzing,Word Cloud,Toolip,0.083
+Dashboard,Analyzing,Word Cloud,Tooltip,0.083
 Dashboard,Analyzing,Word Cloud,Highlighting,0.083
 Dashboard,Analyzing,Table,Ranking and Ordering,0.167
 Dashboard,Analyzing,Point Map,No,0.167

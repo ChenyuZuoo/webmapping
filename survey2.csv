@@ -107,7 +107,7 @@ Dashboard,Analyzing,Toolbar,Filtering,0.055
 Dashboard,Analyzing,Toolbar,Importing and Exporting,0.055
 Dashboard,Analyzing,Toolbar,Calculating,0.055
 Dashboard,Analyzing,Heat Map,Zooming and Panning,0.055
-Dashboard,Analyzing,Heat Map,Toolip,0.055
+Dashboard,Analyzing,Heat Map,Tooltip,0.055
 Dashboard,Analyzing,Heat Map,Clicking,0.055
 Dashboard,Analyzing,Satellite Map,Zooming and Panning,0.166
 Dashboard,Analyzing,Calender View,Highlighting,0.166
@@ -117,18 +117,18 @@ Dashboard,Learning,Toolbar,Filtering,0.2
 Dashboard,Learning,Histogram,No,0.2
 Dashboard,Learning,Point Map,Clicking,0.066
 Dashboard,Learning,Point Map,Zooming and Panning,0.066
-Dashboard,Learning,Point Map,Toolip,0.066
+Dashboard,Learning,Point Map,Tooltip,0.066
 Dashboard,Learning,Choropleth Map,Clicking,0.066
 Dashboard,Learning,Choropleth Map,Zooming and Panning,0.066
-Dashboard,Learning,Choropleth Map,Toolip,0.066
+Dashboard,Learning,Choropleth Map,Tooltip,0.066
 Dashboard,Learning,Menu Page,Selecting,0.2
-Dashboard,Analyzing,Cartogram,Toolip,0.2
+Dashboard,Analyzing,Cartogram,Tooltip,0.2
 Dashboard,Analyzing,Calender View,No,0.2
 Dashboard,Analyzing,Box Plot,No,0.2
 Dashboard,Analyzing,Table,No,0.2
 Dashboard,Analyzing,Toolbar,Highlighting,0.2
 Dashboard,Analyzing,Cartogram,Zooming and Panning,0.125
-Dashboard,Analyzing,Cartogram,Toolip,0.125
+Dashboard,Analyzing,Cartogram,Tooltip,0.125
 Dashboard,Analyzing,Bar Chart,No,0.25
 Dashboard,Analyzing,Parallel Coordinates,No,0.25
 Dashboard,Analyzing,Line Chart,No,0.25
